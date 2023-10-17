@@ -1,7 +1,8 @@
-import { UserController } from '../server';
 import { IUser } from '../types/user';
 
 import axios from 'axios';
+
+const { UserController } = require('../server');
 
 export default function Index({ user }: { user: IUser }) {
   async function getMore() {

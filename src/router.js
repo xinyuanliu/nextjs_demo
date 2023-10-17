@@ -1,7 +1,8 @@
 const express = require('express');
 
-// const UserController = require('./server').UserController;
-import { UserController } from '../server';
+const UserController = require('./server');
+
+console.log('22', UserController);
 
 const router = express.Router();
 
@@ -11,8 +12,8 @@ router.get('/b', (req, res) => res.send('b'));
 
 router.post('/api/getuser', (req, res) => {
   console.log('appppp');
-  // return res.json({ ret: 0, msg: 'success' });
-  return UserController.getUser(req, res);
+  return res.json({ ret: 0, msg: 'success' });
+  // return UserController.getUser(req, res);
 });
 
 router.get('/posts/:id', (req, res) => {
